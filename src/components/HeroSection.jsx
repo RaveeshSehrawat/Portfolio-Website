@@ -23,10 +23,9 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I build fluid, seamless web experiences using HTML, CSS, React, and Tailwind CSS,  
-            backed by robust backend skills in Python, Flask, and databases like MongoDB and SQL.  
-            Passionate about data analysis and machine learning, I leverage tools such as PowerBI,  
-            big data technologies, and AI frameworks to deliver intelligent, insightful solutions.
+            I specialize in building intelligent, data-driven solutions by combining expertise in Python, machine learning frameworks (TensorFlow, PyTorch, Scikit-learn), and big data technologies.
+My work spans data preprocessing, predictive modeling, and analytics, complemented by creating clear, impactful dashboards with tools like Power BI.
+Alongside my ML focus, I develop seamless and responsive web applications using HTML, CSS, React, and Tailwind CSS, with robust backends powered by Flask and databases such as MongoDB and SQL—ensuring AI models are effectively integrated into user-friendly platforms.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
