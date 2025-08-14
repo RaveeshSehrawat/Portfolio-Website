@@ -28,9 +28,9 @@ npm install
    - Add the credentials to your .env.local file:
 
 ```env
-GOOGLE_SHEETS_PRIVATE_KEY=your_private_key
-GOOGLE_SHEETS_CLIENT_EMAIL=your_client_email
-GOOGLE_SHEETS_SHEET_ID=your_sheet_id
+GOOGLE_PRIVATE_KEY=your_private_key
+GOOGLE_CLIENT_EMAIL=your_client_email
+GOOGLE_SHEET_ID=your_sheet_id
 ```
 
 4. Start the development server:
