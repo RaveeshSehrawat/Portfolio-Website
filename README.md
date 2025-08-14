@@ -1,17 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
+
+A modern, responsive portfolio website built with Next.js and styled with an oceanic theme. Features smooth animations, dark mode support, and a contact form integrated with Google Sheets.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS with custom oceanic theme
+- **UI Components**: Custom components with animated oceanic effects
+- **Dark Mode**: Theme switching with next-themes
+- **Contact Form**: Google Sheets API integration for form submissions
+- **Animations**: Custom CSS animations for floating, waves, and bubbles
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set up Google Sheets API:
+   - Create a Google Cloud Project
+   - Enable Google Sheets API
+   - Create service account credentials
+   - Share your Google Sheet with the service account email
+   - Add the credentials to your .env.local file:
+
+```env
+GOOGLE_SHEETS_PRIVATE_KEY=your_private_key
+GOOGLE_SHEETS_CLIENT_EMAIL=your_client_email
+GOOGLE_SHEETS_SHEET_ID=your_sheet_id
+```
+
+4. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

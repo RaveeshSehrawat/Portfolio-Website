@@ -1,26 +1,89 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(186 56% 92%);
+  --foreground: hsl(204 45% 27%);
+  --card: hsl(42 90% 90%);
+  --primary: hsl(187 65% 53%);
+  --primary-foreground: hsl(186 56% 92%);
+  --border: hsl(186 50% 75%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: hsl(206 75% 15%);
+  --foreground: hsl(187 35% 78%);
+  --card: hsl(186 80% 20%);
+  --primary: hsl(187 90% 60%);
+  --primary-foreground: hsl(206 75% 15%);
+  --border: hsl(186 80% 40%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: colors 0.3s;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .beach-button {
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .beach-button:hover {
+    box-shadow: 0 0 12px rgba(80, 200, 255, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .beach-button:active {
+    transform: scale(0.95);
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: 0.375rem;
+    background: linear-gradient(to right, var(--card), var(--card));
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+
+  .card-hover {
+    transition: transform 0.3s;
+  }
+  
+  .card-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-glow {
+    position: relative;
+    text-shadow: 0 0 10px rgba(80, 200, 255, 0.4);
+  }
+
+  .bubble {
+    position: absolute;
+    border-radius: 9999px;
+    background-color: rgba(var(--primary), 0.5);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 20px;
+    height: 20px;
+  }
 }
